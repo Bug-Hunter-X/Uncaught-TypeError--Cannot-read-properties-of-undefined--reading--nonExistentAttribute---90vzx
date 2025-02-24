@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    let divs = document.querySelectorAll('div');
+    // Correct way to access properties: iterate over the NodeList
+    divs.forEach(div => {
+      console.log(div.id); // Access properties of individual elements
+    });
+  </script>
+</body>
+</html>
