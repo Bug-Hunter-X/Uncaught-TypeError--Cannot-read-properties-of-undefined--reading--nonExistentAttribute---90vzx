@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Attempting to access a non-existent attribute of a nodelist
+    let divs = document.querySelectorAll('div');
+    console.log(divs.nonExistentAttribute); //Error: Uncaught TypeError: Cannot read properties of undefined (reading 'nonExistentAttribute')
+  </script>
+</body>
+</html>
